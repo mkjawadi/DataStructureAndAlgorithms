@@ -117,6 +117,26 @@ namespace DataStructureAndAlgorithms
             first = previous;
         }
 
+        public int GetKthFromTheEnd(int k)
+        {
+            if (IsEmpty())
+                throw new InvalidOperationException();
+            var a = first;
+            var b = first;
+            for (int i = 0; i < k - 1; i++)
+            {
+                b = b.next;
+                if (b == null)
+                    throw new ArgumentException();
+            }
+            while (b != last)
+            {
+                a = a.next;
+                b = b.next;
+            }
+            return a.value;
+        }
+
         private Node GetPrevious(Node node)
         {
             var current = first;
