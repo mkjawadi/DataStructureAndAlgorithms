@@ -53,10 +53,14 @@ namespace DataStructureAndAlgorithms
 
             #region Stack
 
-            var reverser = new StringReverser();
-            var reversedText = reverser.Reverse("ABCD");
-            Console.WriteLine(reversedText);
-            
+            // Reversing a string
+            // var reverser = new StringReverser();
+            // var reversedText = reverser.Reverse("ABCD");
+            // Console.WriteLine(reversedText);
+
+            var expression = new Expression();
+            var result = expression.IsBalanced("{(1+5)-(5-3)/[5-3]}");
+            Console.WriteLine(result);
             #endregion
         }
     }
